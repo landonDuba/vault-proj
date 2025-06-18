@@ -1,0 +1,9 @@
+.login-btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-btn {
+    margin: 4px;
+}
