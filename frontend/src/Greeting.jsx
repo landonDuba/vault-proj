@@ -1,27 +1,19 @@
-function Greeting() {
-    const names = ["James", "John", "Jimmy", "Jacob", "Bartholmew"];
+import { useEffect, useState } from "react";
 
-    return (
-        <>
-        <h1>Hello: </h1>
-            <List names={names}></List>
-        </>
-    )
+export default function Greeting() {
+  const [counter, setCounter] = useState(0);
 
+  useEffect(() => {
+    const key = setInterval(() => {
+      setCounter(count => count + 1)
+    }, 1000);
+
+    return () => {
+      clearInterval(key);
+    };
+  }, [])
+
+  return (
+    <p>{counter} seconds have passed.</p>
+  );
 }
-
-
-function List(props) {
-    return (
-        <>
-        <ul>
-            {props.names.map((name) => {
-                return <li>{name}</li>
-            })
-            }
-        </ul>
-        </>
-    )
-}
-
-export default Greeting;
