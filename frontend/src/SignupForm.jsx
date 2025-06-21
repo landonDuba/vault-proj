@@ -1,11 +1,13 @@
+import './Modal.css'
+
 export default function SignupForm(){
     return(
         <>
-            <form>
-                <input type="text" placeholder="Username"></input>
-                <input type="text" placeholder="Password"></input>
-                <input type="text" placeholder="Re-enter Password"></input>
-                <button type="submit">Create Account</button>
+            <form className='authForm'>
+                <input type="text" placeholder="Username" className='formElements'></input>
+                <input type="text" placeholder="Password" className='formElements'></input>
+                <input type="text" placeholder="Re-enter Password" className='formElements'></input>
+                <button type="submit" className='formElements'>Create Account</button>
             </form>
         </>
     );

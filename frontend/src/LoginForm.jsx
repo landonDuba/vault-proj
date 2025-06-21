@@ -1,10 +1,12 @@
+import './Modal.css'
+
 export default function LoginForm(){
     return(
         <>
-            <form>
-                <input type="text" placeholder="Username"></input>
-                <input type="text" placeholder="Password"></input>
-                <button type="submit">Login</button>
+            <form className='authForm'>
+                <input type="text" placeholder="Username" className='formElements'></input>
+                <input type="text" placeholder="Password" className='formElements'></input>
+                <button type="submit" className='formElements'>Login</button>
             </form>
         </>
     );

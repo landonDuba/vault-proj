@@ -7,3 +7,11 @@
 .login-btn {
     margin: 4px;
 }
+
+h2 {
+    transition: color .3s ease-out;
+}
+
+h2:hover {
+    color: #646cffaa;
+}
